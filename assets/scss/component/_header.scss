@@ -1,0 +1,33 @@
+@import "../base/global";
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+}
+// .navbar-menu-wrapper {
+// }
+.navbar-menu {
+  li {
+    display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+    a {
+      margin: 20px 25px;
+      &:last-child {
+        margin: 20px 0 20px 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #menu-btn {
+    display: block;
+  }
+//   .navbar-menu-wrapper {
+//     display: none;
+//   }
+}

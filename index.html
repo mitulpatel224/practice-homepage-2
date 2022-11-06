@@ -5,23 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | News homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <section class="container-fluid">
+    <nav class="navbar">
+      <!-- LOGO -->
+      <a href="#" class="navbar-brand">
+        <img src="./assets/images/logo.svg" alt="logo">
+      </a>
+      <!-- NAVBAR MENU BUTTONS -->
+      <button onclick="toggleMenu(true)" id="menu-btn" class="navbar-toggle d-none">
+        <img id="menu-btn-img" src="./assets/images/icon-menu.svg" alt="menu">
+      </button>
+      <!-- NAVBAR MENU OPTIONS -->
+      <div class="navbar-menu-wrapper">
+        <button onclick="toggleMenu(false)" id="menu-close-btn" class="navbar-toggle d-none">
+          <img id="close-btn-img" src="./assets/images/icon-menu-close.svg" alt="menu-close">
+        </button>
+        <ul class="navbar-menu">
+          <li class="nav-item">
+            <a href="#">Home</a></li>
+          <li class="nav-item">
+            <a href="#">New</a></li>
+          <li class="nav-item">
+            <a href="#">Popular</a></li>
+          <li class="nav-item">
+            <a href="#">Trending</a></li>
+          <li class="nav-item">
+            <a href="#">Categories</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <div class="flex">
+      <aside class="feed-list">
+        <div class="feed">
+          <h4 class="title"></h4>
+        </div>
+        <div class="feed">
+          <h4 class="title"></h4>
+        </div>
+        <div class="feed">
+          <h4 class="title"></h4>
+        </div>
+      </aside>
+    </div> -->
+  </section>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
+  
   The Bright Future of Web 3.0?
 
   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
@@ -54,7 +89,25 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Mitul Patel</a>.
   </div>
+  
+  <script>
+    // WIP: SCRIPT TO TOGGLE MENU
+    const menuVisible=false;
+    const menuDrawer = document.querySelector('.navbar-menu-wrapper');
+    const closeBtn = document.querySelector('.menu-close-btn');  
+    
+    const toggleMenu = (state)=>{
+      console.log(state);
+    if(state){
+      menuDrawer.classList.add('d-none');
+      closeBtn.classList.remove('d-none');
+    }else{  
+      menuDrawer.classList.remove('d-none');
+      closeBtn.classList.add('d-none');
+    }
+  }
+  </script>
 </body>
 </html>
