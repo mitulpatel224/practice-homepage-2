@@ -1,5 +1,3 @@
-@import "./variables";
-
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +24,9 @@ a {
 
 .hidden {
   visibility: hidden;
-  width: 0;
-  height: 0;
+}
+.d-block {
+  display: block;
 }
 .d-none {
   display: none;
@@ -40,6 +39,5 @@ a {
   flex-direction: column;
 }
 .container-fluid {
-  width: 1024px;
-  margin: 0 auto;
+  margin: auto 20px;
 }

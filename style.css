@@ -24,8 +24,10 @@ a:hover, a:active {
 
 .hidden {
   visibility: hidden;
-  width: 0;
-  height: 0;
+}
+
+.d-block {
+  display: block;
 }
 
 .d-none {
@@ -41,55 +43,7 @@ a:hover, a:active {
 }
 
 .container-fluid {
-  width: 1024px;
-  margin: 0 auto;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family: "Inter", "sans-serif";
-  color: hsl(236deg, 13%, 42%);
-  font-size: 18px;
-}
-
-a {
-  display: inline-block;
-  color: #3c3c3c;
-  text-decoration: none;
-}
-a:hover, a:active {
-  color: hsl(35deg, 77%, 62%);
-}
-
-.hidden {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-.d-none {
-  display: none;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.container-fluid {
-  width: 1024px;
-  margin: 0 auto;
+  margin: auto 20px;
 }
 
 .navbar {
@@ -100,8 +54,10 @@ a:hover, a:active {
   margin: 40px auto;
 }
 
-.navbar-toggle {
-  display: none;
+.navbar-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .navbar-menu-wrapper {
@@ -114,6 +70,9 @@ a:hover, a:active {
   box-shadow: 5px 5px 10px 5px #cdcdcd;
 }
 
+.navbar-menu {
+  margin-top: 140px;
+}
 .navbar-menu li {
   flex-direction: row;
   list-style: none;
@@ -125,13 +84,24 @@ a:hover, a:active {
   margin: 20px 0 20px 25px;
 }
 
-@media only screen and (max-width: 480px) {
-  #menu-btn {
-    display: block;
-  }
+@media only screen and (min-width: 769px) {
   .navbar-toggle {
-    display: block;
+    display: none;
   }
+  .navbar-menu-wrapper {
+    position: relative;
+    width: auto;
+    background: revert;
+    box-shadow: revert;
+  }
+  .navbar-menu-wrapper .navbar-menu {
+    margin-top: auto;
+    display: flex;
+  }
+}
+button {
+  border: 0;
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

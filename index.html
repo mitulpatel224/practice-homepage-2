@@ -17,7 +17,7 @@
 <body>
 
   <!-- NAVBAR -->
-  <navbar class="container-fluid">
+  <navbar class="container-fluid d-block">
     <nav class="navbar">
 
       <!-- LOGO -->
@@ -32,7 +32,7 @@
 
       <!-- NAVBAR MENU OPTIONS -->
       <div class="navbar-menu-wrapper">
-        <button onclick="toggleMenu(false)" id="menu-close-btn" class="navbar-toggle">
+        <button onclick="toggleMenu(false)" id="menu-close-btn" class="navbar-toggle navbar-close">
           <img id="close-btn-img" src="./assets/images/icon-menu-close.svg" alt="menu-close">
         </button>
         <ul class="navbar-menu">
@@ -56,20 +56,20 @@
     </nav>
   </navbar>
 
-  
+
   <script>
     // WIP: SCRIPT TO TOGGLE MENU
     const menuVisible = false;
     const menuDrawer = document.querySelector('.navbar-menu-wrapper');
 
-    // window.addEventListener('load', () => {
-    //   // check if mobile device
-    //   if (window.screen.width <= 425) {
-    //     menuDrawer.classList.add('hidden');
-    //   } else {
-    //     menuDrawer.classList.remove('hidden');
-    //   }
-    // })
+    window.addEventListener('load', () => {
+      // check if mobile device
+      if (window.screen.width <= 425) {
+        menuDrawer.classList.add('hidden');
+      } else {
+        menuDrawer.classList.remove('hidden');
+      }
+    })
 
     const toggleMenu = (state) => {
       console.log(state);

@@ -1,5 +1,3 @@
-@import "../base/global";
-
 .navbar {
   display: flex;
   width: 100%;
@@ -7,8 +5,10 @@
   align-items: center;
   margin: 40px auto;
 }
-.navbar-toggle {
-  display: none;
+.navbar-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 .navbar-menu-wrapper {
   position: absolute;
@@ -20,6 +20,7 @@
   box-shadow: 5px 5px 10px 5px #cdcdcd;
 }
 .navbar-menu {
+  margin-top: 140px;
   li {
     // display: inline-flex;
     flex-direction: row;
@@ -33,11 +34,19 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
-  #menu-btn {
-    display: block;
-  }
+// DESKTOP VIEW
+@media only screen and (min-width: 769px) {
   .navbar-toggle {
-    display: block;
+    display: none;
+  }
+  .navbar-menu-wrapper {
+    position: relative;
+    width: auto;
+    background: revert;
+    box-shadow: revert;
+    .navbar-menu {
+      margin-top: auto;
+      display: flex;
+    }
   }
 }
