@@ -7,11 +7,21 @@
   align-items: center;
   margin: 40px auto;
 }
-// .navbar-menu-wrapper {
-// }
+.navbar-toggle {
+  display: none;
+}
+.navbar-menu-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  box-shadow: 5px 5px 10px 5px #cdcdcd;
+}
 .navbar-menu {
   li {
-    display: inline-flex;
+    // display: inline-flex;
     flex-direction: row;
     list-style: none;
     a {
@@ -27,7 +37,7 @@
   #menu-btn {
     display: block;
   }
-//   .navbar-menu-wrapper {
-//     display: none;
-//   }
+  .navbar-toggle {
+    display: block;
+  }
 }

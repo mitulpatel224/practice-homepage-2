@@ -1,113 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | News homepage</title>
 </head>
+
 <body>
-  <section class="container-fluid">
+
+  <!-- NAVBAR -->
+  <navbar class="container-fluid">
     <nav class="navbar">
+
       <!-- LOGO -->
       <a href="#" class="navbar-brand">
         <img src="./assets/images/logo.svg" alt="logo">
       </a>
+
       <!-- NAVBAR MENU BUTTONS -->
-      <button onclick="toggleMenu(true)" id="menu-btn" class="navbar-toggle d-none">
+      <button onclick="toggleMenu(true)" id="menu-btn" class="navbar-toggle">
         <img id="menu-btn-img" src="./assets/images/icon-menu.svg" alt="menu">
       </button>
+
       <!-- NAVBAR MENU OPTIONS -->
       <div class="navbar-menu-wrapper">
-        <button onclick="toggleMenu(false)" id="menu-close-btn" class="navbar-toggle d-none">
+        <button onclick="toggleMenu(false)" id="menu-close-btn" class="navbar-toggle">
           <img id="close-btn-img" src="./assets/images/icon-menu-close.svg" alt="menu-close">
         </button>
         <ul class="navbar-menu">
           <li class="nav-item">
-            <a href="#">Home</a></li>
+            <a href="#">Home</a>
+          </li>
           <li class="nav-item">
-            <a href="#">New</a></li>
+            <a href="#">New</a>
+          </li>
           <li class="nav-item">
-            <a href="#">Popular</a></li>
+            <a href="#">Popular</a>
+          </li>
           <li class="nav-item">
-            <a href="#">Trending</a></li>
+            <a href="#">Trending</a>
+          </li>
           <li class="nav-item">
-            <a href="#">Categories</a></li>
+            <a href="#">Categories</a>
+          </li>
         </ul>
       </div>
     </nav>
-    <!-- <div class="flex">
-      <aside class="feed-list">
-        <div class="feed">
-          <h4 class="title"></h4>
-        </div>
-        <div class="feed">
-          <h4 class="title"></h4>
-        </div>
-        <div class="feed">
-          <h4 class="title"></h4>
-        </div>
-      </aside>
-    </div> -->
-  </section>
+  </navbar>
 
-  
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Mitul Patel</a>.
-  </div>
   
   <script>
     // WIP: SCRIPT TO TOGGLE MENU
-    const menuVisible=false;
+    const menuVisible = false;
     const menuDrawer = document.querySelector('.navbar-menu-wrapper');
-    const closeBtn = document.querySelector('.menu-close-btn');  
-    
-    const toggleMenu = (state)=>{
+
+    // window.addEventListener('load', () => {
+    //   // check if mobile device
+    //   if (window.screen.width <= 425) {
+    //     menuDrawer.classList.add('hidden');
+    //   } else {
+    //     menuDrawer.classList.remove('hidden');
+    //   }
+    // })
+
+    const toggleMenu = (state) => {
       console.log(state);
-    if(state){
-      menuDrawer.classList.add('d-none');
-      closeBtn.classList.remove('d-none');
-    }else{  
-      menuDrawer.classList.remove('d-none');
-      closeBtn.classList.add('d-none');
+      if (state) {
+        menuDrawer.classList.remove('hidden');
+      } else {
+        menuDrawer.classList.add('hidden');
+      }
     }
-  }
   </script>
 </body>
+
 </html>
