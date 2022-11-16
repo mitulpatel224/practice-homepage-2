@@ -41,3 +41,19 @@ a {
 .container-fluid {
   margin: auto 20px;
 }
+
+// LAPTOP VIEW
+@media only screen and (min-width: 769px) {
+  .container-fluid {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+//DESKTOP VIEW
+@media only screen and (min-width: 1025px) {
+  .container-fluid {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
