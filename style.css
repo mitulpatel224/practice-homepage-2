@@ -10,16 +10,23 @@ body {
   width: 100%;
   font-family: "Inter", "sans-serif";
   color: hsl(236deg, 13%, 42%);
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 a {
   display: inline-block;
-  color: #3c3c3c;
+  color: hsl(240deg, 100%, 5%);
   text-decoration: none;
 }
 a:hover, a:active {
   color: hsl(35deg, 77%, 62%);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: hsl(240deg, 100%, 5%);
 }
 
 .hidden {
@@ -46,7 +53,15 @@ a:hover, a:active {
   margin: auto 20px;
 }
 
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
 @media only screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
   .container-fluid {
     width: 768px;
     margin: 0 auto;
@@ -114,6 +129,43 @@ a:hover, a:active {
 button {
   border: 0;
   background: transparent;
+}
+
+article img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.featured-news .news-body h1 {
+  margin-bottom: 20px;
+  color: hsl(240deg, 100%, 5%);
+  line-height: 1;
+}
+.featured-news .news-body p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.featured-news .news-body .read-more {
+  color: hsl(36deg, 100%, 99%);
+  padding: 15px 25px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: hsl(5deg, 85%, 63%);
+}
+
+@media only screen and (min-width: 769px) {
+  .featured-news .news-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .featured-news .news-body h1 {
+    width: 40%;
+  }
+  .featured-news .news-body div {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

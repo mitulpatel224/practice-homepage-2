@@ -74,28 +74,36 @@
     </navbar>
 
     <!-- MAIN SECTION -->
-    <main class="flex">
+    <main class="container-fluid main-content">
       <!-- FEATURED ARTICLE -->
-      <article>
+      <article class="featured-news">
         <figure>
           <img
+            class="mobile"
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="web-3"
+          />
+          <img
+            class="desktop"
             src="./assets/images/image-web-3-desktop.jpg"
             alt="web-3"
-            width="200px"
           />
-          <figcaption>blog image</figcaption>
         </figure>
-        <h1>The Bright Future of Web 3.0?</h1>
-        <p>
-          >We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
-        </p>
-        <a href="#" class="read-more">Read more</a>
+        <div class="news-body">
+          <h1>The Bright Future of Web 3.0?</h1>
+          <div>
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
       </article>
 
       <!-- NEW ARTICLE -->
-      <aside>
+      <!-- <aside>
         <h2>New</h2>
         <article>
           <h4>Hydrogen VS Electric Cars</h4>
@@ -115,11 +123,11 @@
             that means.
           </p>
         </article>
-      </aside>
+      </aside> -->
     </main>
 
     <!-- OTHER ARTICLE LIST -->
-    <section class="other-posts flex">
+    <!-- <section class="other-posts flex">
       <article class="flex">
         <figure>
           <img src="./assets/images/image-retro-pcs.jpg" alt="retro-pcs" />
@@ -153,15 +161,15 @@
           <p>How the pandemic has sparked fresh opportunities.</p>
         </div>
       </article>
-    </section>
+    </section> -->
 
     <!-- FOOTER -->
-    <footer class="attribution">
+    <!-- <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Mitul Patel</a>.
-    </footer>
+    </footer> -->
 
     <script>
       // WIP: SCRIPT TO TOGGLE MENU
