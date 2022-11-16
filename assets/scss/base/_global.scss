@@ -1,3 +1,6 @@
+@use "./colors";
+@use "./variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +13,22 @@ body {
   width: 100%;
   font-family: $font-family-inter, $font-family-sans-serif;
   color: $Dark-grayish-blue;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 400;
 }
 a {
   display: inline-block;
-  color: #3c3c3c;
+  color: $Very-dark-blue;
   text-decoration: none;
   &:hover,
   &:active {
     color: $Soft-orange;
   }
+}
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: $Very-dark-blue;
 }
 
 .hidden {
@@ -42,8 +51,18 @@ a {
   margin: auto 20px;
 }
 
+// TABLET VIEW
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
 // LAPTOP VIEW
 @media only screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
   .container-fluid {
     width: 768px;
     margin: 0 auto;
