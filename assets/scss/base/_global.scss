@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family-inter, $font-family-sans-serif;
+  color: $Dark-grayish-blue;
+  font-size: 18px;
+}
+a {
+  display: inline-block;
+  color: #3c3c3c;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    color: $Soft-orange;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.container-fluid {
+  margin: auto 20px;
+}
+
+// LAPTOP VIEW
+@media only screen and (min-width: 769px) {
+  .container-fluid {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+//DESKTOP VIEW
+@media only screen and (min-width: 1025px) {
+  .container-fluid {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+}
+.navbar-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.navbar-menu-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  box-shadow: 5px 5px 10px 5px #cdcdcd;
+}
+.navbar-menu {
+  margin-top: 140px;
+  li {
+    // display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+    a {
+      margin: 20px 25px;
+      &:last-child {
+        margin: 20px 0 20px 25px;
+      }
+    }
+  }
+}
+
+// DESKTOP VIEW
+@media only screen and (min-width: 769px) {
+  .navbar-toggle {
+    display: none;
+  }
+  .navbar-menu-wrapper {
+    position: relative;
+    width: auto;
+    background: revert;
+    box-shadow: revert;
+    .navbar-menu {
+      margin-top: auto;
+      display: flex;
+    }
+  }
+}
