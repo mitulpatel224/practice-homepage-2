@@ -1,0 +1,7 @@
+{
+  "name": "news-homepage",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "sass ./assets/scss/style.scss style.css --watch"
+  }
+}

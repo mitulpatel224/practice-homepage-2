@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", "sans-serif";
+  color: hsl(236deg, 13%, 42%);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+a {
+  display: inline-block;
+  color: hsl(240deg, 100%, 5%);
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: hsl(35deg, 77%, 62%);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: hsl(240deg, 100%, 5%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.container-fluid {
+  margin: auto 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+  .container-fluid {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .container-fluid {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.navbar-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.navbar-menu-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  box-shadow: 5px 5px 10px 5px #cdcdcd;
+}
+
+.navbar-menu {
+  margin-top: 140px;
+}
+.navbar-menu li {
+  flex-direction: row;
+  list-style: none;
+}
+.navbar-menu li a {
+  margin: 20px 25px;
+}
+.navbar-menu li a:last-child {
+  margin: 20px 0 20px 25px;
+}
+
+@media only screen and (min-width: 769px) {
+  .navbar-toggle {
+    display: none;
+  }
+  .navbar-menu-wrapper {
+    position: relative;
+    width: auto;
+    background: revert;
+    box-shadow: revert;
+  }
+  .navbar-menu-wrapper .navbar-menu {
+    margin-top: auto;
+    display: flex;
+  }
+}
+button {
+  border: 0;
+  background: transparent;
+}
+
+.main-content {
+  margin-bottom: 50px;
+}
+
+article img {
+  width: 100%;
+}
+
+.featured-news {
+  margin-bottom: 50px;
+}
+.featured-news img {
+  margin-bottom: 20px;
+}
+.featured-news .news-body h1 {
+  margin-bottom: 20px;
+  color: hsl(240deg, 100%, 5%);
+  line-height: 1;
+}
+.featured-news .news-body p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.featured-news .news-body .read-more {
+  color: hsl(36deg, 100%, 99%);
+  padding: 15px 25px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: hsl(5deg, 85%, 63%);
+}
+
+.new-articles {
+  padding: 20px;
+  background-color: hsl(240deg, 100%, 5%);
+}
+.new-articles h2 {
+  margin-bottom: 20px;
+  font-size: 38px;
+  color: hsl(35deg, 77%, 62%);
+}
+.new-articles article {
+  padding: 20px 0;
+  border-bottom: 1.5px solid hsl(236deg, 13%, 42%);
+}
+.new-articles article:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+.new-articles article h4 {
+  color: hsl(36deg, 100%, 99%);
+  margin-bottom: 10px;
+}
+.new-articles article p {
+  line-height: 1.6;
+}
+
+.other-articles {
+  margin-bottom: 20px;
+}
+.other-articles article {
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.other-articles article figure {
+  margin-right: 20px;
+}
+.other-articles article figure img {
+  width: 100px;
+}
+.other-articles article div {
+  width: 70%;
+}
+.other-articles article h3 {
+  color: hsl(233deg, 8%, 79%);
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.other-articles article h4 {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.other-articles article p {
+  line-height: 1.8;
+}
+
+@media only screen and (min-width: 769px) {
+  .main-content {
+    margin-bottom: 5s0px;
+    display: flex;
+  }
+  .featured-news {
+    margin-right: 20px;
+  }
+  .featured-news .news-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .featured-news .news-body h1 {
+    width: 40%;
+  }
+  .featured-news .news-body div {
+    width: 50%;
+  }
+  .other-articles {
+    display: flex;
+    justify-content: space-between;
+  }
+  .other-articles article {
+    flex-basis: 100%;
+  }
+  .other-articles figure img {
+    width: 80px;
+  }
+}
+.attribution {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

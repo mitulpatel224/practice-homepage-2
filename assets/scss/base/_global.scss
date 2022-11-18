@@ -1,0 +1,78 @@
+@use "./colors";
+@use "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $font-family-inter, $font-family-sans-serif;
+  color: $Dark-grayish-blue;
+  font-size: 15px;
+  font-weight: 400;
+}
+a {
+  display: inline-block;
+  color: $Very-dark-blue;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    color: $Soft-orange;
+  }
+}
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: $Very-dark-blue;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.container-fluid {
+  margin: auto 20px;
+}
+
+// TABLET VIEW
+@media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
+// LAPTOP VIEW
+@media only screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+  .container-fluid {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+//DESKTOP VIEW
+@media only screen and (min-width: 1025px) {
+  .container-fluid {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}

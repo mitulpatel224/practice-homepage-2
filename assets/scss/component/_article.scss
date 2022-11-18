@@ -1,0 +1,135 @@
+@use "../base/colors";
+
+@mixin article-element {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  margin-bottom: 50px;
+}
+
+article {
+  img {
+    width: 100%;
+  }
+}
+
+// FEATURED NEWS
+.featured-news {
+  margin-bottom: 50px;
+  img {
+    @include article-element();
+  }
+  .news-body {
+    h1 {
+      @include article-element();
+      color: $Very-dark-blue;
+      line-height: 1;
+    }
+    p {
+      @include article-element();
+      line-height: 1.6;
+    }
+    .read-more {
+      color: $Off-white;
+      padding: 15px 25px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+      background-color: $Soft-red;
+    }
+  }
+}
+
+// ASIDE
+.new-articles {
+  padding: 20px;
+  background-color: $Very-dark-blue;
+  h2 {
+    @include article-element();
+    font-size: 38px;
+    color: $Soft-orange;
+  }
+  article {
+    padding: 20px 0;
+    border-bottom: 1.5px solid $Dark-grayish-blue;
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+    h4 {
+      color: $Off-white;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  }
+}
+
+// OTHER NEWS
+.other-articles {
+  @include article-element();
+  article {
+    @include article-element();
+    justify-content: space-between;
+    align-items: flex-start;
+    figure {
+      margin-right: 20px;
+      img {
+        width: 100px;
+      }
+    }
+    div {
+      width: 70%;
+    }
+    h3 {
+      color: $Grayish-blue;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h4 {
+      color: $Very-dark-blue;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.8;
+    }
+  }
+}
+
+// LAPTOP VIEW
+@media only screen and (min-width: 769px) {
+  .main-content {
+    margin-bottom: 5s0px;
+    display: flex;
+  }
+  .featured-news {
+    margin-right: 20px;
+    .news-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        width: 40%;
+      }
+      div {
+        width: 50%;
+      }
+    }
+  }
+  .other-articles{
+    display: flex;
+    justify-content: space-between;
+    article{
+      flex-basis: 100%;
+    }
+    figure {
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
