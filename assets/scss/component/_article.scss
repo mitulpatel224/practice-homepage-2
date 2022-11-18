@@ -11,7 +11,9 @@ article {
   }
 }
 
+// FEATURED NEWS
 .featured-news {
+  margin-bottom: 50px;
   .news-body {
     h1 {
       @include article-element();
@@ -33,9 +35,40 @@ article {
   }
 }
 
+// ASIDE
+.new-articles {
+  padding: 20px;
+  background-color: $Very-dark-blue;
+  h2 {
+    @include article-element();
+    font-size: 38px;
+    color: $Soft-orange;
+  }
+  article {
+    padding: 20px 0;
+    border-bottom: 1.5px solid $Dark-grayish-blue;
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+    h4 {
+      color: $Off-white;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  }
+}
+
 // LAPTOP VIEW
 @media only screen and (min-width: 769px) {
+  .main-content{
+    margin-bottom: 5s0px;
+    display: flex;
+  }
   .featured-news {
+    margin-right: 20px;
     .news-body {
       display: flex;
       justify-content: space-between;
