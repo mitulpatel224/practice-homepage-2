@@ -4,7 +4,7 @@
   margin-bottom: 20px;
 }
 
-.main-content {
+.featured-content {
   margin-bottom: 50px;
 }
 
@@ -123,8 +123,7 @@ article {
 
 // LAPTOP VIEW
 @media only screen and (min-width: 769px) {
-  .main-content {
-    margin-bottom: 5s0px;
+  .featured-content{
     display: flex;
   }
   .featured-news {

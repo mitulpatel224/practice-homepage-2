@@ -22,114 +22,110 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <!-- NAVBAR -->
-      <navbar class="d-block">
-        <nav class="navbar">
-          <!-- LOGO -->
-          <a href="#" class="navbar-brand">
-            <img src="./assets/images/logo.svg" alt="logo" />
-          </a>
+    <!-- NAVBAR -->
+    <navbar class="container-fluid d-block">
+      <nav class="navbar">
+        <!-- LOGO -->
+        <a href="#" class="navbar-brand">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </a>
 
-          <!-- NAVBAR MENU BUTTONS -->
+        <!-- NAVBAR MENU BUTTONS -->
+        <button onclick="toggleMenu(true)" id="menu-btn" class="navbar-toggle">
+          <img
+            id="menu-btn-img"
+            src="./assets/images/icon-menu.svg"
+            alt="menu"
+          />
+        </button>
+
+        <!-- NAVBAR MENU OPTIONS -->
+        <div class="navbar-menu-wrapper">
           <button
-            onclick="toggleMenu(true)"
-            id="menu-btn"
-            class="navbar-toggle"
+            onclick="toggleMenu(false)"
+            id="menu-close-btn"
+            class="navbar-toggle navbar-close"
           >
             <img
-              id="menu-btn-img"
-              src="./assets/images/icon-menu.svg"
-              alt="menu"
+              id="close-btn-img"
+              src="./assets/images/icon-menu-close.svg"
+              alt="menu-close"
             />
           </button>
+          <ul class="navbar-menu">
+            <li class="nav-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">New</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Popular</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Categories</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </navbar>
 
-          <!-- NAVBAR MENU OPTIONS -->
-          <div class="navbar-menu-wrapper">
-            <button
-              onclick="toggleMenu(false)"
-              id="menu-close-btn"
-              class="navbar-toggle navbar-close"
-            >
-              <img
-                id="close-btn-img"
-                src="./assets/images/icon-menu-close.svg"
-                alt="menu-close"
-              />
-            </button>
-            <ul class="navbar-menu">
-              <li class="nav-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">New</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">Popular</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">Trending</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">Categories</a>
-              </li>
-            </ul>
+    <!-- MAIN SECTION -->
+    <main class="container-fluid">
+      <div class="featured-content">
+      <!-- FEATURED ARTICLE -->
+      <article class="featured-news">
+        <figure>
+          <img
+            class="mobile"
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="web-3"
+          />
+          <img
+            class="desktop"
+            src="./assets/images/image-web-3-desktop.jpg"
+            alt="web-3"
+          />
+        </figure>
+        <div class="news-body">
+          <h1>The Bright Future of Web 3.0?</h1>
+          <div>
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a href="#" class="read-more">Read more</a>
           </div>
-        </nav>
-      </navbar>
+        </div>
+      </article>
 
-      <!-- MAIN SECTION -->
-      <main class="main-content">
-        <!-- FEATURED ARTICLE -->
-        <article class="featured-news">
-          <figure>
-            <img
-              class="mobile"
-              src="./assets/images/image-web-3-mobile.jpg"
-              alt="web-3"
-            />
-            <img
-              class="desktop"
-              src="./assets/images/image-web-3-desktop.jpg"
-              alt="web-3"
-            />
-          </figure>
-          <div class="news-body">
-            <h1>The Bright Future of Web 3.0?</h1>
-            <div>
-              <p>
-                We dive into the next evolution of the web that claims to put
-                the power of the platforms back into the hands of the people.
-                But is it really fulfilling its promise?
-              </p>
-              <a href="#" class="read-more">Read more</a>
-            </div>
-          </div>
+      <!-- NEW ARTICLE -->
+      <aside class="new-articles">
+        <h2>New</h2>
+        <article>
+          <h4><a href="#">Hydrogen VS Electric Cars</a></h4>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </article>
-
-        <!-- NEW ARTICLE -->
-        <aside class="new-articles">
-          <h2>New</h2>
-          <article>
-            <h4><a href="#">Hydrogen VS Electric Cars</a></h4>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-          </article>
-          <article>
-            <h4><a href="#">The Downsides of AI Artistry</a></h4>
-            <p>
-              What are the possible adverse effects of on-demand AI image
-              generation?
-            </p>
-          </article>
-          <article>
-            <h4><a href="#">Is VC Funding Drying Up?</a></h4>
-            <p>
-              Private funding by VC firms is down 50% YOY. We take a look at
-              what that means.
-            </p>
-          </article>
-        </aside>
-      </main>
+        <article>
+          <h4><a href="#">The Downsides of AI Artistry</a></h4>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </article>
+        <article>
+          <h4><a href="#">Is VC Funding Drying Up?</a></h4>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </article>
+      </aside>
+      </div>
 
       <!-- OTHER ARTICLE LIST -->
       <section class="other-articles">
@@ -170,7 +166,7 @@
           </div>
         </article>
       </section>
-    </div>
+    </main>
 
     <!-- FOOTER -->
     <footer class="container-fluid attribution">
