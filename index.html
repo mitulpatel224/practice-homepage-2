@@ -22,66 +22,62 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <!-- NAVBAR -->
-      <navbar class="d-block">
-        <nav class="navbar">
-          <!-- LOGO -->
-          <a href="#" class="navbar-brand">
-            <img src="./assets/images/logo.svg" alt="logo" />
-          </a>
+    <!-- NAVBAR -->
+    <navbar class="container-fluid d-block">
+      <nav class="navbar">
+        <!-- LOGO -->
+        <a href="#" class="navbar-brand">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </a>
 
-          <!-- NAVBAR MENU BUTTONS -->
+        <!-- NAVBAR MENU BUTTONS -->
+        <button onclick="toggleMenu(true)" id="menu-btn" class="navbar-toggle">
+          <img
+            id="menu-btn-img"
+            src="./assets/images/icon-menu.svg"
+            alt="menu"
+          />
+        </button>
+
+        <!-- NAVBAR MENU OPTIONS -->
+        <div class="navbar-menu-wrapper">
           <button
-            onclick="toggleMenu(true)"
-            id="menu-btn"
-            class="navbar-toggle"
+            onclick="toggleMenu(false)"
+            id="menu-close-btn"
+            class="navbar-toggle navbar-close"
           >
             <img
-              id="menu-btn-img"
-              src="./assets/images/icon-menu.svg"
-              alt="menu"
+              id="close-btn-img"
+              src="./assets/images/icon-menu-close.svg"
+              alt="menu-close"
             />
           </button>
+          <ul class="navbar-menu">
+            <li class="nav-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">New</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Popular</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Categories</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </navbar>
 
-          <!-- NAVBAR MENU OPTIONS -->
-          <div class="navbar-menu-wrapper">
-            <button
-              onclick="toggleMenu(false)"
-              id="menu-close-btn"
-              class="navbar-toggle navbar-close"
-            >
-              <img
-                id="close-btn-img"
-                src="./assets/images/icon-menu-close.svg"
-                alt="menu-close"
-              />
-            </button>
-            <ul class="navbar-menu">
-              <li class="nav-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">New</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">Popular</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">Trending</a>
-              </li>
-              <li class="nav-item">
-                <a href="#">Categories</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </navbar>
-
-      <!-- MAIN SECTION -->
-      <main class="main-content">
+    <!-- MAIN SECTION -->
+    <main class="container-fluid">
+      <div class="featured-content">
         <!-- FEATURED ARTICLE -->
-        <article class="featured-news">
+        <article role="article" class="featured-news">
           <figure>
             <img
               class="mobile"
@@ -108,8 +104,8 @@
         </article>
 
         <!-- NEW ARTICLE -->
-        <aside class="new-articles">
-          <h2>New</h2>
+        <aside role="list" class="new-articles">
+          <h3>New</h3>
           <article>
             <h4><a href="#">Hydrogen VS Electric Cars</a></h4>
             <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
@@ -129,10 +125,10 @@
             </p>
           </article>
         </aside>
-      </main>
+      </div>
 
       <!-- OTHER ARTICLE LIST -->
-      <section class="other-articles">
+      <section role="list" class="other-articles">
         <article class="flex">
           <figure>
             <img src="./assets/images/image-retro-pcs.jpg" alt="retro-pcs" />
@@ -170,7 +166,7 @@
           </div>
         </article>
       </section>
-    </div>
+    </main>
 
     <!-- FOOTER -->
     <footer class="container-fluid attribution">
