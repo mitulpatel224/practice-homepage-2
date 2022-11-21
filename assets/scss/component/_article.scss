@@ -48,7 +48,7 @@ article {
 .new-articles {
   padding: 20px;
   background-color: $Very-dark-blue;
-  h2 {
+  h3 {
     @include article-element();
     font-size: 38px;
     color: $Soft-orange;
